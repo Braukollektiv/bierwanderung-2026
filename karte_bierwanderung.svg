@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" width="720" height="960">
+<defs>
+  <style>
+    text { font-family: 'Helvetica Neue', Arial, sans-serif; }
+  </style>
+  <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#deefc8"/>
+    <stop offset="100%" stop-color="#c8e0b0"/>
+  </linearGradient>
+  <linearGradient id="lakeGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#3a8fb5"/>
+    <stop offset="100%" stop-color="#1d5f7a"/>
+  </linearGradient>
+  <linearGradient id="urbanGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#d4cfc0"/>
+    <stop offset="100%" stop-color="#c4bfb0"/>
+  </linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.25"/>
+  </filter>
+  <filter id="labelShadow">
+    <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#fff" flood-opacity="0.8"/>
+  </filter>
+  <marker id="boatArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+    <path d="M0,1 L0,7 L8,4 z" fill="#1e4a6e"/>
+  </marker>
+</defs>
+
+<!-- Hintergrund -->
+<rect width="720" height="960" fill="url(#bgGrad)" rx="0"/>
+
+<!-- Städtische Gebiete -->
+<!-- Pfäffikon (oben) -->
+<ellipse cx="310" cy="90" rx="110" ry="55" fill="url(#urbanGrad)" opacity="0.7"/>
+<!-- Wetzikon (unten) -->
+<ellipse cx="420" cy="870" rx="130" ry="55" fill="url(#urbanGrad)" opacity="0.7"/>
+<!-- Auslikon (rechts) -->
+<ellipse cx="590" cy="580" rx="70" ry="45" fill="url(#urbanGrad)" opacity="0.5"/>
+<!-- Seegräben (links) -->
+<ellipse cx="105" cy="510" rx="65" ry="40" fill="url(#urbanGrad)" opacity="0.5"/>
+
+<!-- Strassenlinien (schematisch) -->
+<!-- Usterstrasse (links, N-S) -->
+<line x1="70" y1="150" x2="110" y2="870" stroke="#b8b090" stroke-width="3" opacity="0.6"/>
+<!-- Hittnauer (rechts, schräg) -->
+<line x1="480" y1="80" x2="630" y2="300" stroke="#b8b090" stroke-width="2.5" opacity="0.5"/>
+<!-- Verbindung Wetzikon-Auslikon -->
+<line x1="420" y1="840" x2="590" y2="620" stroke="#b8b090" stroke-width="2.5" opacity="0.5"/>
+<!-- Seestrasse (Pfäffikon am See, nördlich) -->
+<path d="M 280,120 C 310,130 360,150 400,175" stroke="#c8a060" stroke-width="3" fill="none" opacity="0.7"/>
+
+<!-- Strassenbezeichnungen -->
+<text x="62" y="480" font-size="11" fill="#8a7a50" transform="rotate(-84,62,480)" opacity="0.8" font-style="italic">Usterstrasse</text>
+
+<!-- PFÄFFIKERSEE -->
+<path d="M 318,148
+         C 350,148 400,168 435,205
+         C 462,235 478,278 486,328
+         C 494,378 496,428 492,478
+         C 488,528 476,572 456,610
+         C 436,646 408,676 378,702
+         C 355,722 330,736 308,740
+         C 282,740 255,728 232,710
+         C 208,690 188,660 175,624
+         C 160,584 154,540 154,494
+         C 154,448 160,400 172,356
+         C 186,308 208,264 238,228
+         C 268,192 300,152 318,148 Z"
+      fill="url(#lakeGrad)" opacity="0.88" filter="url(#shadow)"/>
+
+<!-- See-Textur (leichte Wellenlinie) -->
+<path d="M 200,380 Q 230,370 260,380 Q 290,390 320,380 Q 350,370 380,380 Q 410,390 440,380"
+      stroke="#6aafcf" stroke-width="1.5" fill="none" opacity="0.4"/>
+<path d="M 185,450 Q 220,440 255,450 Q 290,460 325,450 Q 360,440 395,450 Q 430,460 460,450"
+      stroke="#6aafcf" stroke-width="1.5" fill="none" opacity="0.4"/>
+<path d="M 168,520 Q 205,510 242,520 Q 279,530 316,520 Q 353,510 390,520 Q 427,530 460,520"
+      stroke="#6aafcf" stroke-width="1.5" fill="none" opacity="0.35"/>
+
+<!-- Seename -->
+<text x="316" y="460" font-size="20" fill="#e8f6ff" font-style="italic" font-weight="600"
+      text-anchor="middle" opacity="0.75" letter-spacing="1">Pfäffikersee</text>
+
+<!-- ============ WANDERROUTE (Landweg, rot) ============ -->
+<path d="M 320,108 C 360,125 410,158 445,198 C 468,224 482,258 490,298
+         C 497,334 500,368 500,404 C 500,442 497,476 490,510
+         C 480,548 462,578 442,606 C 418,638 390,662 365,680
+         C 408,710 440,745 452,790 C 462,825 452,852 430,865"
+      stroke="#7a2415" stroke-width="5" fill="none" stroke-linecap="round"
+      stroke-linejoin="round" opacity="0.9"/>
+
+<!-- Richtungspfeile auf der Route -->
+<path d="M 378,134 L 390,120 L 396,136" fill="none" stroke="#7a2415" stroke-width="2.5" opacity="0.7"/>
+<path d="M 493,350 L 502,336 L 506,352" fill="none" stroke="#7a2415" stroke-width="2.5" opacity="0.7"/>
+<path d="M 490,508 L 486,522 L 498,524" fill="none" stroke="#7a2415" stroke-width="2.5" opacity="0.7"/>
+<path d="M 438,765 L 444,780 L 432,780" fill="none" stroke="#7a2415" stroke-width="2.5" opacity="0.7"/>
+
+<!-- ============ BOOTSROUTE (gestrichelt, blau) ============ -->
+<path d="M 440,205 C 390,240 310,310 240,400 C 195,460 170,495 145,522"
+      stroke="#1e4a6e" stroke-width="4" fill="none"
+      stroke-dasharray="12,8" opacity="0.88"
+      marker-end="url(#boatArrow)"/>
+
+<!-- ============ STATIONEN ============ -->
+
+<!-- STATION 1 — Brauerei Sudwerk -->
+<circle cx="320" cy="108" r="22" fill="#7a2415" filter="url(#shadow)"/>
+<circle cx="320" cy="108" r="22" fill="none" stroke="#fff" stroke-width="2.5"/>
+<text x="320" y="115" font-size="17" fill="#fff" font-weight="800" text-anchor="middle">1</text>
+<!-- Label -->
+<rect x="340" y="84" width="175" height="48" rx="6" fill="white" opacity="0.88"/>
+<text x="428" y="101" font-size="12" fill="#7a2415" font-weight="700" text-anchor="middle">Brauerei Sudwerk</text>
+<text x="428" y="118" font-size="10" fill="#5a4a2a" text-anchor="middle">Wuchemärt Pfäffikon 🚩</text>
+
+<!-- STATION 2 — Brüll Bier -->
+<circle cx="465" cy="205" r="22" fill="#7a2415" filter="url(#shadow)"/>
+<circle cx="465" cy="205" r="22" fill="none" stroke="#fff" stroke-width="2.5"/>
+<text x="465" y="212" font-size="17" fill="#fff" font-weight="800" text-anchor="middle">2</text>
+<!-- Label -->
+<rect x="492" y="182" width="145" height="48" rx="6" fill="white" opacity="0.88"/>
+<text x="564" y="199" font-size="12" fill="#7a2415" font-weight="700" text-anchor="middle">Brüll Bier</text>
+<text x="564" y="216" font-size="10" fill="#5a4a2a" text-anchor="middle">Pfäffikon am See</text>
+
+<!-- ⛵ Booti Abfahrt (nahe Bhf/Pier Pfäffikon) -->
+<circle cx="442" cy="205" r="14" fill="#1e4a6e" opacity="0.9"/>
+<text x="442" y="210" font-size="12" text-anchor="middle">⛵</text>
+
+<!-- STATION 3 — Milchhüsli -->
+<circle cx="500" cy="405" r="22" fill="#7a2415" filter="url(#shadow)"/>
+<circle cx="500" cy="405" r="22" fill="none" stroke="#fff" stroke-width="2.5"/>
+<text x="500" y="412" font-size="17" fill="#fff" font-weight="800" text-anchor="middle">3</text>
+<!-- Label -->
+<rect x="528" y="382" width="165" height="48" rx="6" fill="white" opacity="0.88"/>
+<text x="610" y="399" font-size="12" fill="#7a2415" font-weight="700" text-anchor="middle">Milchhüsli</text>
+<text x="610" y="416" font-size="10" fill="#5a4a2a" text-anchor="middle">Büelweid, Irgenhausen</text>
+
+<!-- STATION 4 — Punt Bier (Seegräben, per Booti erreichbar) -->
+<circle cx="118" cy="512" r="22" fill="#7a2415" filter="url(#shadow)"/>
+<circle cx="118" cy="512" r="22" fill="none" stroke="#fff" stroke-width="2.5"/>
+<text x="118" y="519" font-size="17" fill="#fff" font-weight="800" text-anchor="middle">4</text>
+<!-- Label -->
+<rect x="10" y="532" width="150" height="52" rx="6" fill="white" opacity="0.88"/>
+<text x="85" y="550" font-size="12" fill="#7a2415" font-weight="700" text-anchor="middle">Punt Bier</text>
+<text x="85" y="566" font-size="10" fill="#5a4a2a" text-anchor="middle">Schiffstation Seegräben</text>
+<text x="85" y="579" font-size="9" fill="#1e4a6e" text-anchor="middle">⛵ per Booti erreichbar</text>
+
+<!-- STATION 5 — Seebueb -->
+<circle cx="490" cy="510" r="22" fill="#7a2415" filter="url(#shadow)"/>
+<circle cx="490" cy="510" r="22" fill="none" stroke="#fff" stroke-width="2.5"/>
+<text x="490" y="517" font-size="17" fill="#fff" font-weight="800" text-anchor="middle">5</text>
+<!-- Label -->
+<rect x="518" y="488" width="160" height="48" rx="6" fill="white" opacity="0.88"/>
+<text x="598" y="505" font-size="12" fill="#7a2415" font-weight="700" text-anchor="middle">Seebueb Brauerei</text>
+<text x="598" y="522" font-size="10" fill="#5a4a2a" text-anchor="middle">Badi Auslikon</text>
+
+<!-- STATION 6 — Robenhauser -->
+<circle cx="455" cy="680" r="22" fill="#7a2415" filter="url(#shadow)"/>
+<circle cx="455" cy="680" r="22" fill="none" stroke="#fff" stroke-width="2.5"/>
+<text x="455" y="687" font-size="17" fill="#fff" font-weight="800" text-anchor="middle">6</text>
+<!-- Label -->
+<rect x="483" y="658" width="170" height="48" rx="6" fill="white" opacity="0.88"/>
+<text x="568" y="675" font-size="12" fill="#7a2415" font-weight="700" text-anchor="middle">Robenhauser Bräu</text>
+<text x="568" y="692" font-size="10" fill="#5a4a2a" text-anchor="middle">Eichhölzliweg, Wetzikon</text>
+
+<!-- STATION 7 — Braukollektiv -->
+<circle cx="430" cy="862" r="22" fill="#7a2415" filter="url(#shadow)"/>
+<circle cx="430" cy="862" r="22" fill="none" stroke="#fff" stroke-width="2.5"/>
+<text x="430" y="869" font-size="17" fill="#fff" font-weight="800" text-anchor="middle">7</text>
+<!-- Label -->
+<rect x="458" y="840" width="195" height="52" rx="6" fill="white" opacity="0.88"/>
+<text x="555" y="857" font-size="12" fill="#7a2415" font-weight="700" text-anchor="middle">Keller Bier / Braukollektiv</text>
+<text x="555" y="873" font-size="10" fill="#5a4a2a" text-anchor="middle">FBW Areal, Wetzikon 🚩</text>
+<text x="555" y="886" font-size="9" fill="#3d6b23" text-anchor="middle">🎶 Festzelt · Live-Band</text>
+
+<!-- ============ ORTSNAMEN ============ -->
+<text x="275" y="72" font-size="15" fill="#3a2e1f" font-weight="700" text-anchor="middle" opacity="0.85">Pfäffikon ZH</text>
+<text x="108" y="498" font-size="13" fill="#3a2e1f" font-weight="600" text-anchor="middle" opacity="0.8">Seegräben</text>
+<text x="590" y="568" font-size="12" fill="#3a2e1f" font-weight="600" text-anchor="middle" opacity="0.75">Auslikon</text>
+<text x="390" y="918" font-size="15" fill="#3a2e1f" font-weight="700" text-anchor="middle" opacity="0.85">Wetzikon</text>
+<!-- Büelweid / Irgenhausen -->
+<text x="590" y="345" font-size="11" fill="#5a4a2a" font-style="italic" text-anchor="middle" opacity="0.7">Irgenhausen</text>
+
+<!-- ============ LEGENDE ============ -->
+<rect x="18" y="18" width="220" height="112" rx="10" fill="white" opacity="0.88"/>
+<text x="30" y="40" font-size="13" fill="#7a2415" font-weight="800">8. ZüriOberländer</text>
+<text x="30" y="57" font-size="13" fill="#7a2415" font-weight="800">Bierwanderung 2026</text>
+<!-- Wanderroute -->
+<line x1="30" y1="76" x2="60" y2="76" stroke="#7a2415" stroke-width="4" stroke-linecap="round"/>
+<text x="68" y="80" font-size="11" fill="#3a2e1f">Wanderroute (zu Fuss)</text>
+<!-- Bootsroute -->
+<line x1="30" y1="96" x2="60" y2="96" stroke="#1e4a6e" stroke-width="3" stroke-dasharray="8,5"/>
+<text x="68" y="100" font-size="11" fill="#3a2e1f">Booti (CHF 15.–)</text>
+<!-- Stationen -->
+<circle cx="43" cy="117" r="10" fill="#7a2415"/>
+<text x="43" y="121" font-size="9" fill="#fff" font-weight="800" text-anchor="middle">1</text>
+<text x="68" y="121" font-size="11" fill="#3a2e1f">Bierstationen (1–7)</text>
+
+<!-- ============ KOMPASS ============ -->
+<g transform="translate(668, 52)">
+  <circle cx="0" cy="0" r="22" fill="white" opacity="0.85"/>
+  <polygon points="0,-18 5,0 0,4 -5,0" fill="#7a2415"/>
+  <polygon points="0,18 5,0 0,-4 -5,0" fill="#ccc"/>
+  <text x="0" y="-22" font-size="10" fill="#3a2e1f" font-weight="700" text-anchor="middle">N</text>
+</g>
+
+</svg>
